@@ -1,0 +1,288 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  font-size: 16px;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* colors */
+:root {
+    --white: #fff;
+    --background-white: rgb(221, 221, 221);
+    --text-black: #111b21;
+    --icon-gray: #54656f;
+    --info-gray: #363636;
+    --message-green: #a7ff97;
+    --message-white: rgb(255, 255, 255);
+    --scroll-green: #5ea252;
+    --background: #d9dbdd7d;
+}
+/* some default CSS */
+.chat-header{
+    background-color: var(--background);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* App container */
+.app-container{
+    width: 100%;
+    height: 100%;
+    background-color: var(--white);
+}
+.appbox{
+    width: 100%;
+    height: 100%;
+    background-color:transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* contacs container */
+.contacts-container{
+    width:30vw;
+    height: 100vh;
+    border-right: var(--icon-gray) solid 1px;
+    /* overflow: hidden; */
+}
+.contacts-header{
+    width: 30vw;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.user-pic{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0.5rem 0.6rem;
+    cursor: pointer;
+}
+.user-pic img{
+    width: 45px;
+}
+.header-accessories{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-accessories div{
+    margin: 0.5rem 0.8rem;
+    cursor: pointer;
+}
+.same-width img{
+    height: 25px;
+}
+
+.contacts-header-searchbox{
+    padding: 0.6rem 0.5rem;
+    justify-content: space-around;
+    border-bottom: var(--background) solid 1px;
+}
+.contacts-header-searchbox .search-img{
+    height: 20px;
+    width: 20px;
+}
+.contacts-header-searchbox img{
+    height: 1.25rem;
+}
+.contacts-header-searchbox .searchbox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--background);
+    width: 27vw;
+    border-radius: 10px;
+    padding: 0.23rem 0.5rem;
+}
+.contacts-header-searchbox .searchbox input{
+    width: 21rem;
+    height: 1.43rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0rem 0.5rem;
+}
+input[type=text]:focus{
+    outline: none;
+}
+
+.filter-btn{
+    width: 20px;
+    cursor: pointer;
+}
+.contacts-header-archive{
+    justify-content: flex-start !important;
+    align-items: center !important;
+    border-bottom: var(--background) solid 1px;
+    padding: 0.7rem 0rem;
+}
+.contacts-header-archive div{
+    width: fit-content;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+.archive-img, .archive-img img{
+    width: 20px;
+    margin: 0px 0.75rem;
+}
+.contacts-card-holder{
+    height: 82vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.contacts-card-holder::-webkit-scrollbar{
+    width: 5px;
+    background-color: var(--background);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--scroll-green);
+    border-radius: 10px;
+}
+.contacts-card{
+    width: 30vw;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0rem;
+    padding-right: 0.65rem;
+    border-bottom: solid 1px var(--background);
+}
+.contact-info{
+    width: 24vw;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+.contact-info .first-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.user-name{
+    width: fit-content;
+    padding: 0.25rem 0rem;
+    font-size: 1.1rem;
+    color: var(--text-black);
+}
+.last-message-time{
+    width: fit-content;
+    font-size: 0.95rem;
+    color: var(--info-gray);
+}
+.last-message-text{
+    font-size: 0.95rem;
+    color: var(--info-gray);
+}
+
+.privacy-message{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    color: blue;
+    cursor: pointer;
+}
+/* messages container */
+.message-container{
+    width:70vw;
+    height: 100vh;
+}
+.user-details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.message-holder{
+max-height: 82vh;
+min-height: 82vh;
+background: url(images/whatsapp-background.jpg);
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0.45rem 0rem;
+padding-left: 7.5rem;
+padding-right: 4.5rem;
+overflow-y: scroll;
+overflow-x: hidden;
+}
+.message-holder::-webkit-scrollbar{
+    width: 5px;
+    background-color: var(--background);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--scroll-green);
+    border-radius: 10px;
+}
+.chat-time{
+    font-size: 0.9rem;
+    color: var(--info-gray);
+    background-color: var(--background-white);
+    padding: 0.35rem 0.85rem;
+    margin: 1rem 0.5rem;
+    border-radius: 5px;
+}
+.sent{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin: 0.25rem 0rem;
+}
+.received{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 0.25rem 0rem;
+}
+.msg-plate, .received div{
+    font-size: 1rem;
+    padding: 0.5rem 0.45rem;
+    background-color: var(--message-green);
+    border-radius: 8px;
+    max-width: 40vw;
+    word-wrap: normal;
+}
+.received div{
+    background-color: var(--message-white);
+}
+.message-creater-plate{
+    padding: 0.55rem 0.65rem;
+    /* padding-top: 0%; */
+    background-color: var(--background);
+
+}
+.message-writer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.send-btn img{
+    width: 30px;
+    height: 30px;
+    margin-left: 0.65rem;
+    cursor: pointer;
+}
+.message-creater-plate input{
+    width: 56vw;
+    height: 2.3rem;
+    border: none;
+    border-radius: 3px;
+    padding: 0rem 0.5rem;
+    font-size: 1.1rem;
+}
